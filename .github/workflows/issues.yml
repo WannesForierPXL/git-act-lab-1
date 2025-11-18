@@ -1,0 +1,16 @@
+name: issues
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log titel
+        run: echo "Issue title: ${{ github.event.issue.title }}"
+
+      - name: log body
+        run: echo "Issue body: ${{ github.event.issue.body }}"
+
+  

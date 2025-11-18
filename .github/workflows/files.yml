@@ -1,0 +1,19 @@
+name: files
+on:
+  workflow_dispatch:
+
+
+jobs:
+  files:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Make directory
+        run: mkdir dir1
+
+      - name: bestand schrijven
+        run: echo "korte tekst" > dir1/output.txt
+
+      - name: inhoud directory tonen
+        run: ls -a
+      

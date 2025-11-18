@@ -16,4 +16,7 @@ jobs:
 
       - name: inhoud directory tonen
         run: ls -a
+
+      - name: inhoud betsnad tonen
+        run: cat dir1/output.txt
       

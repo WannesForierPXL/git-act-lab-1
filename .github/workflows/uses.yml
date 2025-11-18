@@ -1,0 +1,19 @@
+name: Uses Examples
+on:
+  workflow_dispatch:
+
+jobs:
+  uses-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code with an action
+        uses: actions/checkout@v4
+
+      - name: run python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: run script
+        run: python my_script.py
+  

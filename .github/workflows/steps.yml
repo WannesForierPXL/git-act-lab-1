@@ -6,8 +6,15 @@ jobs:
   steps-example:
     runs-on: ubuntu-latest
     steps:
-      - run: mkdir testmachine
-      - run: uname -a > testmachine\output.txt
-      - run: cat testmachine\output.txt
-      - run: ls -alhR
+      - name: Make directory
+        run: mkdir testmachine
+
+      - name: execute uname command
+        run: uname -a > testmachine/output.txt
+
+      - name: Check content of txt file
+        run: cat testmachine/output.txt
+
+      - name: Check directory output
+        run: ls -alhR
   
